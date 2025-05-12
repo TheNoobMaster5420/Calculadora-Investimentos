@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Investimentos</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-neutral-100">
+
+  <div class="min-h-screen flex items-center justify-center px-6">
+    <div class="w-full max-w-2xl shadow-lg rounded-2xl bg-white p-8">
+      <h1 class="text-3xl font-light tracking-wide text-neutral-800 text-center">
+        Calculadora de Investimentos
+      </h1>
+
+      <div class="grid grid-cols-2 gap-6 mt-6">
+        <div>
+          <label for="capitalInicial" class="text-sm text-neutral-700">Capital Inicial (R$)</label>
+          <input type="number" id="capitalInicial" class="border rounded px-3 py-2 w-full" value="1000">
+        </div>
+        <div>
+          <label for="taxaJuros" class="text-sm text-neutral-700">Taxa de Juros Mensal (%)</label>
+          <input type="number" id="taxaJuros" class="border rounded px-3 py-2 w-full" value="1">
+        </div>
+        <div>
+          <label for="aporteMensal" class="text-sm text-neutral-700">Aporte Mensal (R$)</label>
+          <input type="number" id="aporteMensal" class="border rounded px-3 py-2 w-full" value="200">
+        </div>
+        <div>
+          <label for="meses" class="text-sm text-neutral-700">Meses</label>
+          <input type="number" id="meses" class="border rounded px-3 py-2 w-full" value="12">
+        </div>
+      </div>
+
+      <button id="calcularButton" class="w-full bg-neutral-800 text-white hover:bg-neutral-700 mt-6 py-2 rounded">
+        Calcular Montante
+      </button>
+
+      <div id="resultados" class="mt-6 hidden">
+        <h2 id="montanteFinal" class="text-xl font-medium text-neutral-900"></h2>
+        <ul id="historico" class="mt-4 space-y-1 text-neutral-700 text-sm"></ul>
+      </div>
+
+      <div id="grafico" class="mt-6 h-64"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="calculadora.js"></script>
+</body>
+</html>
+    
